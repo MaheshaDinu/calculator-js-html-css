@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator</title>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="calculator">
+        <form>
+          <div class="display">
+            <input type="text" name="display" />
+          </div>
+          <div class="buttons">
+            <input
+              class="AC-DE"
+              type="button"
+              value="AC"
+              onclick="clearDisplay()"
+            />
+            <input
+              class="AC-DE"
+              type="button"
+              value="DE"
+              onclick="display.value = display.value.toString().slice(0,-1)"
+            />
+            <input type="button" value="." onclick="insertValue('.')" />
+            <input
+              class="corner-button"
+              type="button"
+              value="/"
+              onclick="insertValue(' / ')"
+            />
+          </div>
+          <div class="buttons">
+            <input type="button" value="7" onclick="insertValue('7')" />
+            <input type="button" value="8" onclick="insertValue('8')" />
+            <input type="button" value="9" onclick="insertValue('9')" />
+            <input
+              class="corner-button"
+              type="button"
+              value="*"
+              onclick="insertValue(' * ')"
+            />
+          </div>
+          <div class="buttons">
+            <input type="button" value="4" onclick="insertValue('4')" />
+            <input type="button" value="5" onclick="insertValue('5')" />
+            <input type="button" value="6" onclick="insertValue('6')" />
+            <input
+              class="corner-button"
+              type="button"
+              value="-"
+              onclick="insertValue(' - ')"
+            />
+          </div>
+          <div class="buttons">
+            <input type="button" value="1" onclick="insertValue('1')" />
+            <input type="button" value="2" onclick="insertValue('2')" />
+            <input type="button" value="3" onclick="insertValue('3')" />
+            <input
+              class="corner-button"
+              type="button"
+              value="+"
+              onclick="insertValue(' + ')"
+            />
+          </div>
+          <div class="buttons">
+            <input
+              type="button"
+              value="0"
+              class="bottom-buttons"
+              onclick="insertValue('0')"
+            />
+            <input
+              type="button"
+              value="="
+              class="bottom-buttons eaqual"
+              onclick="calculateResult()"
+            />
+          </div>
+        </form>
+      </div>
+    </div>
+    <script src="/script.js"></script>
+  </body>
+</html>
